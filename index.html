@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>École du E-commerce Africain (E.E.A) – Lance ton business e-commerce rentable</title>
+<meta name="description" content="Lance un business e-commerce rentable depuis l'Afrique, sans importer de Chine et sans carte bancaire internationale. Inscription via WhatsApp.">
+<meta property="og:title" content="École du E-commerce Africain – Offre de lancement">
+<meta property="og:description" content="De $1,000 à $5,000 / mois en e-commerce depuis l'Afrique. Produits locaux, boutique mobile, encaissement Mobile Money.">
+<meta name="theme-color" content="#0b1a12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1a12; --bg2:#102418; --card:#143023; --line:#1f4331;
+  --green:#1fbf6b; --gold:#ffb81c; --gold2:#ff8a00; --red:#ff5a4d;
+  --text:#f2f7f3; --muted:#a8bdb0; --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;padding-top:56px}
+h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.alt{background:var(--bg2)}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+h2{font-size:clamp(1.7rem,4.5vw,2.5rem);margin-bottom:18px}
+.lead{color:var(--muted);font-size:1.08rem;max-width:720px}
+.center{text-align:center}.center .lead{margin:0 auto}
+em.g{font-style:normal;color:var(--gold)}
+
+/* top bar */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:linear-gradient(90deg,var(--gold2),var(--gold));color:#1a1203;font-weight:700;font-size:.85rem;display:flex;justify-content:center;align-items:center;gap:12px;height:56px;padding:0 12px;flex-wrap:wrap;text-align:center}
+.topbar .mini{font-family:Sora,sans-serif;font-variant-numeric:tabular-nums;background:#1a1203;color:var(--gold);padding:4px 10px;border-radius:8px;letter-spacing:.04em}
+
+/* buttons */
+.btn{display:inline-block;background:linear-gradient(135deg,var(--green),#13a85a);color:#04150b;font-weight:800;font-size:1.05rem;padding:18px 32px;border-radius:14px;text-decoration:none;box-shadow:0 10px 30px -8px rgba(31,191,107,.6);transition:transform .15s, box-shadow .15s;text-align:center}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px -8px rgba(31,191,107,.75)}
+.btn.gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1203;box-shadow:0 10px 30px -8px rgba(255,138,0,.6)}
+.note{font-size:.85rem;color:var(--muted);margin-top:12px}
+
+/* hero */
+.hero{padding:56px 0 72px;background:radial-gradient(900px 400px at 80% -10%,rgba(31,191,107,.22),transparent),radial-gradient(700px 400px at 0% 0%,rgba(255,184,28,.12),transparent)}
+.hero h1{font-size:clamp(1.9rem,5.6vw,3.4rem);margin-bottom:20px;max-width:900px}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:720px;margin-bottom:28px}
+.hero .story{max-width:720px;margin-bottom:28px;padding-left:16px;border-left:3px solid var(--gold)}
+.hero .story strong{color:var(--gold)}
+.method{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:0 0 34px}
+.method div{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;font-size:.95rem;color:var(--muted)}
+.method b{display:block;color:var(--text);margin-bottom:4px}
+
+/* countdown */
+.countdown-box{margin:0 0 34px;max-width:560px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.countdown-box .label{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:700;margin-bottom:12px}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cd div{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:14px 4px;text-align:center}
+.cd span{display:block;font-family:Sora,sans-serif;font-weight:800;font-size:clamp(1.6rem,6vw,2.4rem);color:var(--gold);font-variant-numeric:tabular-nums}
+.cd small{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.cd-end{display:none;font-weight:700;color:var(--red);margin-top:10px}
+
+/* proof */
+.proof{padding:36px 0;border-block:1px solid var(--line);background:var(--bg2)}
+.pay{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:22px}
+.pay span{border:1px solid var(--line);background:var(--card);padding:8px 18px;border-radius:999px;font-weight:700;font-size:.85rem;letter-spacing:.06em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;text-align:center}
+.stats b{display:block;font-family:Sora,sans-serif;font-size:1.7rem;color:var(--gold)}
+.stats span{color:var(--muted);font-size:.9rem}
+
+/* problems */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:34px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.card .n{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:10px;background:rgba(255,90,77,.15);color:var(--red);font-weight:800;margin-bottom:12px}
+.card h3{font-size:1.05rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+.result{margin-top:30px;padding:20px 24px;border-radius:var(--radius);background:rgba(255,90,77,.08);border:1px solid rgba(255,90,77,.3)}
+
+/* pillars */
+.pillar .n{background:rgba(31,191,107,.15);color:var(--green)}
+.pillar.hot{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.brand{font-family:Sora,sans-serif;font-weight:800;color:var(--gold)}
+
+/* modules */
+.modules{margin-top:30px;display:grid;gap:12px}
+.mod{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.mod i{flex:none;font-style:normal;font-family:Sora,sans-serif;font-weight:800;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1203;border-radius:10px;padding:6px 10px;font-size:.8rem}
+.mod p{color:var(--muted)} .mod b{color:var(--text)}
+
+/* bonus */
+.bonus{border-color:rgba(255,184,28,.4)}
+.bonus .tag{display:inline-block;background:rgba(255,184,28,.15);color:var(--gold);border-radius:999px;font-size:.78rem;font-weight:700;padding:3px 12px;margin-bottom:10px}
+
+/* testimonials */
+.quote p{font-style:italic;color:var(--text);margin-bottom:12px}
+.quote cite{font-style:normal;color:var(--gold);font-weight:700;font-size:.9rem}
+.shots{margin-top:18px;border:2px dashed var(--line);border-radius:var(--radius);padding:26px;text-align:center;color:var(--muted);font-size:.9rem}
+
+/* offer */
+.offer{background:radial-gradient(700px 360px at 50% 0,rgba(255,184,28,.16),transparent),var(--bg2)}
+.price-box{max-width:560px;margin:34px auto 0;background:var(--card);border:2px solid var(--gold);border-radius:24px;padding:34px 26px;text-align:center}
+.old{color:var(--muted);text-decoration:line-through;font-size:1.1rem}
+.price{font-family:Sora,sans-serif;font-weight:800;font-size:clamp(2.2rem,8vw,3.2rem);color:var(--gold);margin:6px 0}
+.price small{display:block;font-size:1.1rem;color:var(--text);font-weight:600}
+.badge{display:inline-block;background:var(--red);color:#fff;font-weight:800;font-size:.8rem;padding:5px 14px;border-radius:999px;margin-bottom:14px}
+.price-box .countdown-box{margin:22px auto;background:var(--bg);max-width:none}
+.price-box .btn{display:block;margin-top:8px}
+
+/* guarantee */
+.guar{display:flex;gap:22px;align-items:center;flex-wrap:wrap;background:var(--card);border:1px solid var(--green);border-radius:20px;padding:28px}
+.guar .ico{font-size:3rem}
+.guar h3{margin-bottom:8px}
+
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;padding:0 20px}
+summary{cursor:pointer;font-weight:700;padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);padding-bottom:18px}
+
+/* footer */
+footer{padding:44px 0 110px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.9rem}
+footer .btn{margin:14px 0 24px}
+footer a.l{text-decoration:underline;margin:0 6px}
+
+/* floating wa */
+.wa{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:10px;background:#25d366;color:#04150b;font-weight:800;font-size:.9rem;padding:14px 18px;border-radius:999px;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+@media(max-width:520px){.wa span{display:none}.wa{padding:16px}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s, transform .6s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- Barre countdown fixe -->
+<div class="topbar">
+  <span>🔥 Évènement le 15 décembre · 60 000 FCFA jusqu'à l'ouverture, dans</span>
+  <span class="mini" id="cd-mini">--j --h --m --s</span>
+</div>
+
+<!-- SECTION 1 : HERO -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Offre de lancement Afrique</span>
+    <h1>Comment lancer un business e-commerce rentable depuis l'Afrique et générer <em class="g">de $1,000 à $5,000 / mois</em>… sans importer de Chine et sans carte bancaire internationale</h1>
+    <p class="sub">Le système importé des USA et adapté à 100 % à la réalité africaine pour trouver des produits gagnants <b>locaux</b>, créer une boutique qui convertit et encaisser via Mobile Money.</p>
+
+    <div class="story">
+      <p>Pendant 5 ans, j'ai généré <strong>plus de $500,000</strong> en e-commerce. Et j'ai compris une chose :</p>
+      <p>L'e-commerce en Afrique est une mine d'or, mais il a ses codes. Ses réalités. Sa logistique. Quand tu connais les codes, ça devient une machine à cash. Quand tu ne les connais pas, tu perds tout.</p>
+    </div>
+
+    <div class="method">
+      <div><b>1. Le Bon Produit</b>Un produit à forte marge autour de toi, sans bloquer ton argent 30 jours en Chine.</div>
+      <div><b>2. Le Bon Message</b>Parler à l'africain pour qu'il achète MAINTENANT. Pas comme les Américains.</div>
+      <div><b>3. La Vraie Logistique</b>Gérer les clients qui ne décrochent pas et livrer sans te faire voler.</div>
+      <div><b>4. Le Paiement Local</b>Encaisser avec Wave, Orange Money, MTN, même sans compte bancaire.</div>
+    </div>
+
+    <div class="countdown-box">
+      <div class="label">⏳ Évènement le 15 décembre : fin de l'offre de lancement</div>
+      <div class="cd" data-cd>
+        <div><span data-d>--</span><small>Jours</small></div>
+        <div><span data-h>--</span><small>Heures</small></div>
+        <div><span data-m>--</span><small>Minutes</small></div>
+        <div><span data-s>--</span><small>Secondes</small></div>
+      </div>
+      <p class="cd-end" data-end>L'évènement a commencé : le tarif est désormais de 120 000 FCFA.</p>
+    </div>
+
+    <a class="btn" data-checkout href="#offre">OUI, JE VEUX LANCER MON BUSINESS MAINTENANT →</a>
+    <p class="note">💬 Inscription et paiement par Orange Money, Wave, MTN ou Moov, confirmés directement sur WhatsApp</p>
+  </div>
+</header>
+
+<!-- SECTION 2 : PREUVE SOCIALE -->
+<div class="proof">
+  <div class="wrap">
+    <div class="pay"><span>WAVE</span><span>ORANGE MONEY</span><span>MTN MOMO</span><span>MOOV</span></div>
+    <div class="stats">
+      <div><b>+$500,000</b><span>📈 générés</span></div>
+      <div><b>12+</b><span>🌍 pays africains</span></div>
+      <div><b>1,200+</b><span>👥 élèves formés</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3 : PROBLÈME -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Le problème</span>
+    <h2>Pourquoi 95 % des débutants échouent en e-commerce en Afrique ?</h2>
+    <p class="lead">Tu as déjà vécu ça ?</p>
+    <div class="grid3">
+      <div class="card rv"><div class="n">1</div><h3>LE BLOCAGE DE PAIEMENT</h3><p>Tu n'as pas de carte Visa internationale. Tu ne peux pas payer ta pub Facebook et tu ne peux pas recevoir ton argent.</p></div>
+      <div class="card rv"><div class="n">2</div><h3>L'ENFER DE LA LIVRAISON</h3><p>Le client commande, le livreur part, le client ne décroche plus. Tu paies le transport pour rien. C'est le Cash On Delivery qui te tue.</p></div>
+      <div class="card rv"><div class="n">3</div><h3>LES FORMATIONS INADAPTÉES</h3><p>On te vend du Shopify + AliExpress avec 25 jours de livraison. En Afrique, le client veut son produit AUJOURD'HUI. Ça ne peut pas marcher.</p></div>
+    </div>
+    <div class="result rv">
+      <b>RÉSULTAT :</b> tu brûles ton budget pub, ton stock pourrit dans ta chambre, et tu abandonnes en disant « le e-commerce ne marche pas en Afrique ». <br><br>
+      <b>Faux. C'est leur méthode qui ne marche pas en Afrique.</b>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 : SOLUTION -->
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">La solution</span>
+    <h2>Je te présente : <span class="brand">L'ÉCOLE DU E-COMMERCE AFRICAIN (E.E.A)</span></h2>
+    <p class="lead">Le SEUL programme étape par étape créé par un expert du terrain pour dompter le marché africain.</p>
+    <div class="grid3">
+      <div class="card pillar rv"><div class="n">1</div><h3>SOURCING HYBRIDE <span class="brand">(l'arme secrète)</span></h3><p>Trouve des produits à 300 % de marge directement à Adjamé, Sandaga, Kantamanto ou chez un fournisseur express en 5 jours. Sans bloquer ton capital.</p></div>
+      <div class="card pillar rv"><div class="n">2</div><h3>LA BOUTIQUE QUI CONVERTIT SUR MOBILE</h3><p>Pas de site lourd qui bug avec la 4G. Une boutique ultra-rapide, optimisée WhatsApp, qui vend même avec une petite connexion.</p></div>
+      <div class="card pillar hot rv"><div class="n">3</div><h3>LE SYSTÈME ANTI-REFUS C.O.D</h3><p>Mon script exact d'appel de confirmation + mon système de livreurs qui fait passer le taux de refus de 60 % à moins de 5 %. C'est ce pilier qui sauve ton business.</p></div>
+      <div class="card pillar rv"><div class="n">4</div><h3>LA PUB RENTABLE À 5 $ / JOUR</h3><p>Cible les vrais acheteurs de ta ville avec TikTok et Facebook Ads. Sans jeter ton argent par la fenêtre.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 : CONTENU -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Le programme</span>
+    <h2>Voici exactement ce que tu vas recevoir</h2>
+    <div class="modules">
+      <div class="mod rv"><i>MODULE 1</i><p><b>Fondations</b> – La mentalité d'un vendeur à $10k/mois en Afrique</p></div>
+      <div class="mod rv"><i>MODULE 2</i><p><b>Produit Gagnant</b> – La méthode pour trouver ton produit en 48h chrono</p></div>
+      <div class="mod rv"><i>MODULE 3</i><p><b>Boutique Mobile</b> – Création de ta boutique sans coder (100 % téléphone)</p></div>
+      <div class="mod rv"><i>MODULE 4</i><p><b>Publicité</b> – Facebook, Instagram &amp; TikTok Ads version Afrique</p></div>
+      <div class="mod rv"><i>MODULE 5</i><p><b>Logistique &amp; Cash</b> – Gestion des livreurs, confirmation et encaissement Mobile Money</p></div>
+      <div class="mod rv"><i>MODULE 6</i><p><b>Scale</b> – Passer de 10 à 100 ventes par jour sans t'effondrer</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 : BONUS -->
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Bonus</span>
+    <h2>Si tu t'inscris aujourd'hui, tu reçois 3 bonus gratuits</h2>
+    <div class="grid3">
+      <div class="card bonus rv"><span class="tag">🎁 BONUS 1 · Valeur 200$ – OFFERT</span><h3>Le Répertoire Privé de Fournisseurs</h3><p>Ma liste de +20 fournisseurs fiables en Afrique (Nigeria, Ghana, Côte d'Ivoire) et en Chine Express.</p></div>
+      <div class="card bonus rv"><span class="tag">🎁 BONUS 2 · Valeur 100$ – OFFERT</span><h3>Pack Scripts de Closing WhatsApp</h3><p>Copie-colle mes messages et scripts d'appels vocaux qui transforment 7 prospects sur 10 en clients payants.</p></div>
+      <div class="card bonus rv"><span class="tag">🎁 BONUS 3 · Valeur 300$ – OFFERT</span><h3>Groupe VIP &amp; Coaching Hebdo</h3><p>Accès à mon groupe privé Telegram. Chaque semaine, je corrige tes boutiques et tes pubs en LIVE.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 : TÉMOIGNAGES -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Résultats</span>
+    <h2>Ils ont appliqué la méthode</h2>
+    <div class="grid3">
+      <div class="card quote rv"><p>« J'ai rentabilisé la formation en 11 jours. Le sourcing local m'a tout changé. J'étais bloqué depuis 6 mois. »</p><cite>— Marc K., Abidjan 🇨🇮</cite></div>
+      <div class="card quote rv"><p>« Avant, 1 client sur 2 ne prenait pas son colis. Avec la méthode C.O.D, je suis à 95 % de livraison. Merci ! »</p><cite>— Aminata T., Dakar 🇸🇳</cite></div>
+    </div>
+    <!-- Remplace ce bloc par tes vraies captures (images dans /images) -->
+    <div class="shots rv">📸 Ajoute ici 3 captures d'écran WhatsApp + 2 captures de ventes Mobile Money</div>
+  </div>
+</section>
+
+<!-- SECTION 8 : OFFRE -->
+<section class="offer" id="offre">
+  <div class="wrap center">
+    <span class="eyebrow">Offre de lancement Afrique</span>
+    <h2>Investis dans ta liberté aujourd'hui</h2>
+    <p class="lead">Valeur réelle du programme + bonus : <b>1,500 $</b> · Prix normal : <b>300 $</b></p>
+    <div class="price-box rv">
+      <span class="badge">🔥 OFFRE DE LANCEMENT</span>
+      <div class="old">300 $</div>
+      <div class="price">60 000 FCFA<small>soit 99 $</small></div>
+      <p class="note">Paiement en 1 fois ou 2 fois disponible.<br>L'offre passe à <b>120 000 FCFA</b> le 15 décembre, jour de l'évènement.</p>
+      <div class="countdown-box">
+        <div class="label">⏳ Il te reste</div>
+        <div class="cd" data-cd>
+          <div><span data-d>--</span><small>Jours</small></div>
+          <div><span data-h>--</span><small>Heures</small></div>
+          <div><span data-m>--</span><small>Minutes</small></div>
+          <div><span data-s>--</span><small>Secondes</small></div>
+        </div>
+        <p class="cd-end" data-end>L'évènement a commencé : le tarif est désormais de 120 000 FCFA.</p>
+      </div>
+      <a class="btn gold" data-checkout href="#">JE REJOINS L'E.E.A POUR 60 000 FCFA MAINTENANT →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9 : GARANTIE -->
+<section>
+  <div class="wrap">
+    <div class="guar rv">
+      <div class="ico">🛡️</div>
+      <div style="flex:1;min-width:240px">
+        <h3>Garantie 30 jours « Action ou Remboursé »</h3>
+        <p style="color:var(--muted)">Teste la méthode pendant 30 jours. Lance ta boutique, trouve ton produit, fais tes pubs. Si tu n'as pas de résultats, envoie-moi un message WhatsApp et je te rembourse 100 %. Sans question. Sans stress. C'est tout le risque que je prends pour toi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 10 : FAQ -->
+<section class="alt">
+  <div class="wrap" style="max-width:780px">
+    <span class="eyebrow">FAQ</span>
+    <h2>Questions fréquentes</h2>
+    <details><summary>Je n'ai pas d'ordinateur, je peux le faire ?</summary><p>Oui. 90 % de mes élèves travaillent uniquement avec un smartphone et une connexion 4G.</p></details>
+    <details><summary>Comment je paie la formation ?</summary><p>Clique sur le bouton d'inscription : tu es redirigé vers WhatsApp, où je te confirme les modalités. Tu peux régler par Wave, Orange Money, MTN ou Moov Money.</p></details>
+    <details><summary>J'ai déjà un travail, j'ai le temps ?</summary><p>Oui. Il te faut 1 à 2h par jour le soir pour gérer les commandes et les pubs. C'est fait pour ça.</p></details>
+    <details><summary>Au bout de combien de temps j'ai mes premières ventes ?</summary><p>Si tu appliques, entre 3 et 7 jours après le module 4. C'est la moyenne de nos élèves.</p></details>
+  </div>
+</section>
+
+<!-- SECTION 11 : FOOTER -->
+<footer>
+  <div class="wrap">
+    <p>Besoin d'aide pour t'inscrire ?</p>
+    <a class="btn" data-wa href="#">Parler à un conseiller sur WhatsApp</a>
+    <p>© École du E-commerce Africain · <a class="l" href="#">Mentions légales</a> | <a class="l" href="#">CGV</a></p>
+  </div>
+</footer>
+
+<a class="wa" data-wa href="#" aria-label="WhatsApp">💬 <span>Une question ? Écris-nous sur WhatsApp</span></a>
+
+<script>
+/* ====== CONFIGURATION : modifie ici ====== */
+const CONFIG = {
+  // Date de l'évènement (heure UTC = Abidjan/Dakar). Format ISO. Ajoute l'heure réelle, ex: 2026-12-15T18:00:00Z
+  EVENT_DATE: "2026-12-15T00:00:00Z",
+  // Numéro WhatsApp de l'hôte, format international sans + ni espaces (ex: 2250700000000)
+  WHATSAPP_NUMBER: "237683227117",
+  // Message pré-rempli quand on clique sur un bouton d'inscription
+  CHECKOUT_MESSAGE: "Bonjour, je veux rejoindre l'École du E-commerce Africain (E.E.A) à 60 000 FCFA. Comment je procède pour payer ?",
+  // Message pré-rempli pour les boutons "question / conseiller"
+  WHATSAPP_MESSAGE: "Bonjour, j'ai une question sur l'École du E-commerce Africain."
+};
+/* ========================================= */
+
+document.querySelectorAll("[data-checkout]").forEach(a => {
+  a.href = "https://wa.me/" + CONFIG.WHATSAPP_NUMBER + "?text=" + encodeURIComponent(CONFIG.CHECKOUT_MESSAGE);
+  a.target = "_blank"; a.rel = "noopener";
+});
+document.querySelectorAll("[data-wa]").forEach(a => {
+  a.href = "https://wa.me/" + CONFIG.WHATSAPP_NUMBER + "?text=" + encodeURIComponent(CONFIG.WHATSAPP_MESSAGE);
+  a.target = "_blank"; a.rel = "noopener";
+});
+
+const target = new Date(CONFIG.EVENT_DATE).getTime();
+const pad = n => String(n).padStart(2, "0");
+const mini = document.getElementById("cd-mini");
+
+function tick(){
+  let diff = target - Date.now();
+  const over = diff <= 0;
+  if (over) diff = 0;
+  const d = Math.floor(diff / 864e5),
+        h = Math.floor(diff % 864e5 / 36e5),
+        m = Math.floor(diff % 36e5 / 6e4),
+        s = Math.floor(diff % 6e4 / 1e3);
+  document.querySelectorAll("[data-cd]").forEach(box => {
+    box.querySelector("[data-d]").textContent = pad(d);
+    box.querySelector("[data-h]").textContent = pad(h);
+    box.querySelector("[data-m]").textContent = pad(m);
+    box.querySelector("[data-s]").textContent = pad(s);
+    const end = box.parentElement.querySelector("[data-end]");
+    if (end) end.style.display = over ? "block" : "none";
+  });
+  mini.textContent = over ? "C'est parti !" : `${pad(d)}j ${pad(h)}h ${pad(m)}m ${pad(s)}s`;
+  if (!over) setTimeout(tick, 1000 - (Date.now() % 1000));
+}
+tick();
+
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll(".rv").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
