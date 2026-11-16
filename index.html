@@ -61,6 +61,19 @@ mark{background:linear-gradient(transparent 62%,rgba(242,176,30,.6) 62%);color:i
 .btn.block{display:block;width:100%}
 .note{font-size:.88rem;color:var(--muted);margin-top:14px}
 
+/* compte à rebours */
+.cd-wrap{margin:22px 0 6px}
+.cd-label{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green-m);margin-bottom:10px}
+.cd{display:flex;gap:10px}
+.cd>div{min-width:68px;text-align:center;background:var(--green-d);color:var(--paper);border-radius:14px;padding:10px 8px 8px}
+.cd b{display:block;font-family:var(--hf);font-weight:800;font-size:1.9rem;line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.cd small{display:block;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;margin-top:5px;color:rgba(251,247,236,.75)}
+.cd-end{display:none;font-family:var(--hf);font-weight:800;font-size:1.2rem;color:var(--green)}
+.cd-wrap.over .cd{display:none}
+.cd-wrap.over .cd-end{display:block}
+.box .cd-wrap{margin:4px 0 18px}
+@media(max-width:620px){.cd{gap:8px}.cd>div{min-width:0;flex:1;padding:9px 4px 7px}.cd b{font-size:1.55rem}}
+
 /* hero */
 .hero{position:relative;overflow-x:clip;padding:76px 0 160px;background:var(--paper)}
 .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
@@ -260,6 +273,16 @@ footer a.l:first-of-type{margin-left:0}
         <div><s>Prix standard : 100 000 FCFA</s><b>39 000 FCFA</b><small>Tarif promotionnel · économisez 61 000 FCFA</small></div>
         <a class="btn" data-checkout href="#offre">JE M'INSCRIS POUR 39 000 FCFA</a>
       </div>
+      <div class="cd-wrap" data-cd-wrap>
+        <div class="cd-label">La session démarre dans</div>
+        <div class="cd" role="timer" aria-live="off">
+          <div><b data-d>00</b><small>Jours</small></div>
+          <div><b data-h>00</b><small>Heures</small></div>
+          <div><b data-m>00</b><small>Min</small></div>
+          <div><b data-s>00</b><small>Sec</small></div>
+        </div>
+        <div class="cd-end">La session a démarré. Contactez-nous pour la prochaine !</div>
+      </div>
       <p class="note">Nouvelle session intensive de 7 jours · 100 % en ligne · paiement par Mobile Money ou carte</p>
     </div>
 
@@ -438,6 +461,16 @@ footer a.l:first-of-type{margin-left:0}
       <div class="old">Prix standard : 100 000 FCFA</div>
       <div class="amount">39 000 FCFA</div>
       <div class="save">Tarif promotionnel · économisez 61 000 FCFA</div>
+      <div class="cd-wrap" data-cd-wrap>
+        <div class="cd-label">Début de la session le 15 décembre</div>
+        <div class="cd" role="timer" aria-live="off">
+          <div><b data-d>00</b><small>Jours</small></div>
+          <div><b data-h>00</b><small>Heures</small></div>
+          <div><b data-m>00</b><small>Min</small></div>
+          <div><b data-s>00</b><small>Sec</small></div>
+        </div>
+        <div class="cd-end">La session a démarré. Contactez-nous pour la prochaine !</div>
+      </div>
       <ul class="checks">
         <li>Format : 7 jours de formation intensive et pratique</li>
         <li>100 % en ligne, avec des formateurs qualifiés</li>
@@ -475,6 +508,24 @@ const CONFIG = {
 
 const $ = id => document.getElementById(id);
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* Compte à rebours : 15 décembre 2026 à 00h00 (heure du Cameroun, UTC+1) */
+const EVENT_DATE = new Date("2026-12-15T00:00:00+01:00").getTime();
+const pad = n => String(n).padStart(2, "0");
+function countdown(){
+  const left = Math.max(0, EVENT_DATE - Date.now());
+  const d = Math.floor(left / 864e5), h = Math.floor(left % 864e5 / 36e5),
+        m = Math.floor(left % 36e5 / 6e4), s = Math.floor(left % 6e4 / 1e3);
+  document.querySelectorAll("[data-cd-wrap]").forEach(w => {
+    w.classList.toggle("over", left === 0);
+    w.querySelector("[data-d]").textContent = pad(d);
+    w.querySelector("[data-h]").textContent = pad(h);
+    w.querySelector("[data-m]").textContent = pad(m);
+    w.querySelector("[data-s]").textContent = pad(s);
+  });
+  return left;
+}
+if (countdown() > 0){ const cdt = setInterval(() => { if (countdown() === 0) clearInterval(cdt); }, 1000); }
 
 /* Liens WhatsApp */
 document.querySelectorAll("[data-checkout]").forEach(a => {
