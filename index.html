@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Programme 360 – Réussir le e-commerce en Afrique</title>
-<meta name="description" content="Programme 360 : 7 jours de formation 100 % en ligne pour réussir dans le e-commerce en Afrique, depuis un simple téléphone. Paiement à la livraison et Mobile Money. 39 000 FCFA.">
+<meta name="description" content="Programme 360 : 7 jours de formation 100 % en ligne pour réussir dans le e-commerce en Afrique, depuis un simple téléphone. Paiement à la livraison et Mobile Money. 39 000 FCFA.">
 <meta property="og:title" content="Programme 360 – Réussir le e-commerce en Afrique">
-<meta property="og:description" content="Gagnez entre 300 000 FCFA et 1 million de FCFA chaque mois. Formation intensive de 7 jours, 100 % mobile, 100 % en ligne.">
+<meta property="og:description" content="Gagnez de 500 000 FCFA à 1 million de FCFA et plus par mois. Formation intensive de 7 jours, 100 % mobile, 100 % en ligne.">
 <meta name="theme-color" content="#082A1F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,13 +111,17 @@ mark{background:linear-gradient(transparent 62%,rgba(242,176,30,.6) 62%);color:i
 @keyframes tick{to{transform:translateX(-100%)}}
 
 /* opportunity */
-.pairs{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.pairs>div{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:26px 26px 30px;transition:background .25s,color .25s,transform .25s}
-.pairs>div:hover{background:var(--green);color:var(--paper);transform:translateY(-4px)}
-.pairs h3{font-size:1.4rem;margin-bottom:6px}
-.pairs>div:hover h3{color:var(--gold)}
-.pairs p{color:var(--muted);transition:color .25s}
-.pairs>div:hover p{color:rgba(251,247,236,.88)}
+.pairs{display:grid;grid-template-columns:1fr;gap:16px}
+.pairs>div{border:1px solid var(--line);border-top:6px solid var(--c-b);border-radius:20px;padding:24px 24px 28px;background:var(--c-bg);color:var(--ink);min-width:0}
+.pairs .ic{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--c-ic);color:var(--c-icc);margin-bottom:16px}
+.pairs .ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pairs h3{font-size:1.4rem;margin-bottom:8px;overflow-wrap:break-word}
+.pairs h3 em{font-style:normal;color:var(--c-acc)}
+.pairs p{color:#2E4238}
+.pairs p strong{color:var(--c-acc);font-weight:700}
+.t-gold{--c-bg:#FBE7B0;--c-b:var(--gold-d);--c-ic:var(--green-d);--c-icc:var(--gold);--c-acc:var(--green-m)}
+.t-green{--c-bg:#DCE8DE;--c-b:var(--green-m);--c-ic:var(--gold);--c-icc:var(--green-d);--c-acc:#7A5200}
+@media(min-width:621px){.pairs{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}}
 
 /* comparison */
 .vs{width:100%;border-collapse:separate;border-spacing:0;border-radius:20px;overflow:hidden;border:1px solid rgba(251,247,236,.2)}
@@ -223,7 +227,7 @@ footer a.l:first-of-type{margin-left:0}
 @media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.ticker div{animation:none;padding-left:0}.panel{animation:none}.blob{transform:translate(-50%,-50%)}}
 
 @media(max-width:940px){
-  .hero-grid,.offer-grid,.sim,.prog{grid-template-columns:1fr}
+  .hero-grid,.offer-grid,.sim,.prog{grid-template-columns:minmax(0,1fr)}
   .hero-grid,.offer-grid{gap:40px}
   .figs{grid-template-columns:repeat(2,1fr);gap:30px 36px}
   .tabs{grid-template-columns:repeat(4,1fr)}
@@ -237,7 +241,7 @@ footer a.l:first-of-type{margin-left:0}
   .tb-long{display:none}.tb-short{display:inline}
   .section{padding:84px 0 92px}
   .hero{padding:44px 0 130px}
-  .pairs,.figs{grid-template-columns:1fr}
+  .figs{grid-template-columns:1fr}
   .box,.sim-in,.sim-out{padding:26px 22px}
   .panels{padding:30px 24px 42px}
   .panel .big{font-size:4.5rem}
@@ -251,6 +255,30 @@ footer a.l:first-of-type{margin-left:0}
   .sticky s{display:block;font-size:.75rem;color:rgba(251,247,236,.65)}
   .sticky .btn{padding:12px 18px;font-size:.86rem}
 }
+
+/* ajustements responsive */
+.hero-grid>*,.offer-grid>*,.sim>*,.prog>*{min-width:0}
+img,svg,video{max-width:100%;height:auto}
+.hero h1{font-size:clamp(1.85rem,6.4vw,3.7rem);overflow-wrap:break-word}
+mark{-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.nw{white-space:nowrap}
+.fine{font-size:.875rem;color:var(--muted);margin:2px 0 6px}
+.cta-s{display:none}
+.btn{max-width:100%}
+.sim-in input{height:44px}
+.pairs>div:hover,.pairs>div:hover h3,.pairs>div:hover p{transform:none}
+@media(max-width:620px){
+  .buy{flex-direction:column;align-items:stretch;gap:16px}
+  .buy .btn{width:100%}
+  .note,.sim-foot,.foot-note,.head p,.figs p,.checks li,.sim-out ul,.car p,.box .lead,.flow small,.faq details p{font-size:1rem}
+}
+@media(max-width:400px){
+  .cta-l{display:none}.cta-s{display:inline}
+  .btn{padding:15px 10px;font-size:.9rem;white-space:nowrap}
+  .btn.inv,.box .btn{white-space:normal}
+  .wrap{padding:0 16px}
+}
+@media(max-height:480px) and (orientation:landscape){.hero{padding-bottom:110px}}
 </style>
 </head>
 <body>
@@ -258,7 +286,7 @@ footer a.l:first-of-type{margin-left:0}
 <div class="topbar">
   <span class="tb-long">Session intensive de 7 jours · Tarif promotionnel</span>
   <span class="tb-short">Tarif promotionnel</span>
-  <b>39 000 FCFA</b>
+  <b>39 000 FCFA</b>
 </div>
 <div class="progress" id="progress"></div>
 
@@ -267,12 +295,13 @@ footer a.l:first-of-type{margin-left:0}
   <div class="wrap hero-grid">
     <div>
       <span class="kicker">Programme 360</span>
-      <h1>Réussissez dans le e-commerce en Afrique et gagnez <mark>entre 300 000 FCFA et 1 million de FCFA</mark> chaque mois</h1>
+      <h1>Réussissez le <span class="nw">e-commerce</span> en Afrique et gagnez <mark>de 500 000 FCFA à 1 million de FCFA et plus</mark> par mois</h1>
       <p class="sub">Vous n'avez pas besoin d'un ordinateur dernier cri ni de milliers de francs de budget. <b>Un simple téléphone portable et les bonnes méthodes locales</b> suffisent pour bâtir une entreprise rentable.</p>
       <div class="buy">
-        <div><s>Prix standard : 100 000 FCFA</s><b>39 000 FCFA</b><small>Tarif promotionnel · économisez 61 000 FCFA</small></div>
-        <a class="btn" data-checkout href="#offre">JE M'INSCRIS POUR 39 000 FCFA</a>
+        <div><s>Prix standard : 100 000 FCFA</s><b>39 000 FCFA</b><small>Tarif promotionnel · économisez 61 000 FCFA</small></div>
+        <a class="btn" data-checkout href="#offre"><span class="cta-l">JE M'INSCRIS POUR 39 000 FCFA</span><span class="cta-s">JE M'INSCRIS · 39 000 FCFA</span></a>
       </div>
+      <p class="fine">Résultats variables selon l'investissement personnel de chacun.</p>
       <div class="cd-wrap" data-cd-wrap>
         <div class="cd-label">La session démarre dans</div>
         <div class="cd" role="timer" aria-live="off">
@@ -281,9 +310,9 @@ footer a.l:first-of-type{margin-left:0}
           <div><b data-m>00</b><small>Min</small></div>
           <div><b data-s>00</b><small>Sec</small></div>
         </div>
-        <div class="cd-end">La session a démarré. Contactez-nous pour la prochaine !</div>
+        <div class="cd-end">La session a démarré. Contactez-nous pour la prochaine !</div>
       </div>
-      <p class="note">Nouvelle session intensive de 7 jours · 100 % en ligne · paiement par Mobile Money ou carte</p>
+      <p class="note">Nouvelle session intensive de 7 jours · 100 % en ligne · paiement par Mobile Money ou carte</p>
     </div>
 
     <div class="stage"><div class="blob"></div><div class="phone" aria-label="Le parcours d'une commande">
@@ -291,7 +320,7 @@ footer a.l:first-of-type{margin-left:0}
         <div class="ph-top">Le parcours d'une commande</div>
         <ol class="flow" id="flow">
           <li class="on" tabindex="0"><span>1</span><div><b>Commande reçue</b><small>WhatsApp, TikTok, Facebook</small></div></li>
-          <li tabindex="0"><span>2</span><div><b>Confirmation téléphonique</b><small>Taux de livraison supérieur à 85 %</small></div></li>
+          <li tabindex="0"><span>2</span><div><b>Confirmation téléphonique</b><small>Taux de livraison supérieur à 85 %</small></div></li>
           <li tabindex="0"><span>3</span><div><b>Livreur local</b><small>Livraison le jour même</small></div></li>
           <li tabindex="0"><span>4</span><div><b>Paiement encaissé</b><small>À la livraison ou par Mobile Money</small></div></li>
         </ol>
@@ -301,10 +330,8 @@ footer a.l:first-of-type{margin-left:0}
     </div>
   </div>
 <div class="ticker" aria-hidden="true">
-  <div>Paiement à la livraison<span>—</span>Mobile Money<span>—</span>WhatsApp<span>—</span>TikTok<span>—</span>Sourcing Chine<span>—</span>Livraison le jour même<span>—</span>100 % mobile<span>—</span>Paiement à la livraison<span>—</span>Mobile Money<span>—</span>WhatsApp<span>—</span>TikTok<span>—</span>Sourcing Chine<span>—</span>Livraison le jour même<span>—</span>100 % mobile<span>—</span></div>
+  <div>Paiement à la livraison<span>—</span>Mobile Money<span>—</span>WhatsApp<span>—</span>TikTok<span>—</span>Sourcing Chine<span>—</span>Livraison le jour même<span>—</span>100 % mobile<span>—</span>Paiement à la livraison<span>—</span>Mobile Money<span>—</span>WhatsApp<span>—</span>TikTok<span>—</span>Sourcing Chine<span>—</span>Livraison le jour même<span>—</span>100 % mobile<span>—</span></div>
 </header>
-
-</div>
 
 <!-- OPPORTUNITÉ -->
 <section class="section light">
@@ -312,13 +339,13 @@ footer a.l:first-of-type{margin-left:0}
     <div class="head rv">
       <span class="kicker">L'opportunité</span>
       <h2>Pourquoi le e-commerce est la plus grande opportunité <mark>en Afrique</mark></h2>
-      <p>En Europe et en Amérique, le e-commerce est saturé par une concurrence féroce et des frais publicitaires exorbitants. En Afrique, le marché est en pleine explosion. La demande grandit chaque jour, mais copier les méthodes occidentales est la raison n°1 de l'échec des débutants. Pour réussir, il faut adapter son offre aux réalités du terrain.</p>
+      <p>En Europe et en Amérique, le e-commerce est saturé par une concurrence féroce et des frais publicitaires exorbitants. En Afrique, le marché est en pleine explosion. La demande grandit chaque jour, mais copier les méthodes occidentales est la raison n° 1 de l'échec des débutants. Pour réussir, il faut adapter son offre aux réalités du terrain.</p>
     </div>
     <div class="pairs">
-      <div class="rv"><h3>+80 % de rentabilité</h3><p>Sur les produits sourcés directement sur le marché local ou en Chine.</p></div>
-      <div class="rv"><h3>0 FCFA de frais logiciels complexes</h3><p>Tout votre business se pilote depuis un simple smartphone.</p></div>
-      <div class="rv"><h3>Cash on Delivery &amp; Mobile Money</h3><p>Maîtrisez le paiement à la livraison pour convertir 3x plus de clients.</p></div>
-      <div class="rv"><h3>Un marché sous-équipé</h3><p>Vos futurs clients cherchent des produits de qualité tous les jours : la place est à prendre dès maintenant.</p></div>
+      <div class="rv t-gold"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><h3><em>+80 %</em> de rentabilité</h3><p>Sur les produits sourcés directement sur le marché local ou en Chine.</p></div>
+      <div class="rv t-green"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><h3><em>0 FCFA</em> de frais logiciels complexes</h3><p>Tout votre business se pilote depuis un simple smartphone.</p></div>
+      <div class="rv t-green"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg></span><h3>Cash on Delivery &amp; Mobile Money</h3><p>Maîtrisez le paiement à la livraison pour convertir <strong>3x</strong> plus de clients.</p></div>
+      <div class="rv t-gold"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l1 12H5L6 8z"/><path d="M9 11V7a3 3 0 016 0v4"/></svg></span><h3>Un marché <em>sous-équipé</em></h3><p>Vos futurs clients cherchent des produits de qualité tous les jours : la place est à prendre dès maintenant.</p></div>
     </div>
   </div>
 </section>
@@ -328,7 +355,7 @@ footer a.l:first-of-type{margin-left:0}
   <div class="wrap">
     <div class="head rv">
       <span class="kicker">Le déclic</span>
-      <h2>Pourquoi 90 % des formations occidentales échouent en Afrique</h2>
+      <h2>Pourquoi 90 % des formations occidentales échouent en Afrique</h2>
     </div>
     <table class="vs rv">
       <thead><tr><th>Modèle européen / américain</th><th>Le vrai e-commerce africain</th></tr></thead>
@@ -352,10 +379,10 @@ footer a.l:first-of-type{margin-left:0}
     <div class="figs">
       <div class="rv"><b data-fmt="#" data-vals="7">7</b><span class="u">jours de formation intensive</span><p>Le temps exact pour maîtriser l'ensemble du système, de l'idée à la première vente.</p></div>
       <div class="rv"><b data-fmt="# à #" data-vals="5,10">5 à 10</b><span class="u">commandes / jour</span><p>L'objectif réaliste dès votre premier mois d'activité avec les bons produits.</p></div>
-      <div class="rv"><b data-fmt="# %" data-vals="100">100 %</b><span class="u">mobile</span><p>Aucune compétence en programmation ni matériel lourd requis.</p></div>
+      <div class="rv"><b data-fmt="# %" data-vals="100">100 %</b><span class="u">mobile</span><p>Aucune compétence en programmation ni matériel lourd requis.</p></div>
       <div class="rv"><b data-fmt="#x à #x" data-vals="3,5">3x à 5x</b><span class="u">de marge</span><p>Le coefficient moyen appliqué sur les produits sourcés grâce à nos canaux validés.</p></div>
     </div>
-    <p class="foot-note">Pas besoin de vous déplacer : la formation est 100 % en ligne, avec des formateurs qualifiés.</p>
+    <p class="foot-note">Pas besoin de vous déplacer : la formation est 100 % en ligne, avec des formateurs qualifiés.</p>
   </div>
 </section>
 
@@ -379,12 +406,12 @@ footer a.l:first-of-type{margin-left:0}
         <div class="tot" id="o-total"></div>
         <ul>
           <li><b id="o-deliv"></b> ventes livrées par mois</li>
-          <li>Marge par vente : <b id="o-unit"></b></li>
-          <li>Formation à 39 000 FCFA rentabilisée après <b id="o-roi"></b></li>
+          <li>Marge par vente : <b id="o-unit"></b></li>
+          <li>Formation à 39 000 FCFA rentabilisée après <b id="o-roi"></b></li>
         </ul>
       </div>
     </div>
-    <p class="sim-foot">Simulation indicative : marge brute avant publicité et frais de livraison. Ce n'est pas une garantie de résultat.</p>
+    <p class="sim-foot">Simulation indicative : marge brute avant publicité et frais de livraison. Ce n'est pas une garantie de résultat.</p>
   </div>
 </section>
 
@@ -406,7 +433,7 @@ footer a.l:first-of-type{margin-left:0}
         <div class="panel" role="tabpanel"><div class="big">1</div><h3>Trouver votre produit gagnant</h3><p>Découvrez la méthode exacte pour identifier les produits à fort potentiel d'achat impulsif, que ce soit au marché local ou directement auprès de fournisseurs certifiés en Chine.</p></div>
         <div class="panel" role="tabpanel"><div class="big">2</div><h3>Sourcing &amp; logistique sans friction</h3><p>Apprenez à négocier les coûts de gros, sécuriser l'acheminement et structurer un réseau de livreurs de confiance dans votre ville.</p></div>
         <div class="panel" role="tabpanel"><div class="big">3</div><h3>Vendre avec un simple téléphone</h3><p>Créez une offre irrésistible, configurez des tunnels de vente légers et convertissez vos visiteurs en acheteurs payants directement depuis votre smartphone.</p></div>
-        <div class="panel" role="tabpanel"><div class="big">4</div><h3>Le système de confirmation &amp; conversion</h3><p>Maîtrisez l'art de la confirmation téléphonique pour garantir un taux de livraison supérieur à 85 % et maximiser chaque franc investi.</p></div>
+        <div class="panel" role="tabpanel"><div class="big">4</div><h3>Le système de confirmation &amp; conversion</h3><p>Maîtrisez l'art de la confirmation téléphonique pour garantir un taux de livraison supérieur à 85 % et maximiser chaque franc investi.</p></div>
         <div class="pg" id="pg"></div>
       </div>
     </div>
@@ -424,8 +451,8 @@ footer a.l:first-of-type{margin-left:0}
       <div class="arrows"><button type="button" id="prev" aria-label="Précédent">←</button><button type="button" id="next" aria-label="Suivant">→</button></div>
     </div>
     <div class="car" id="car">
-      <blockquote><h3>J'ai rentabilisé mes 39 000 FCFA dès ma 3ème vente.</h3><p>J'avais déjà suivi deux formations sur le dropshipping occidental qui ne m'avaient servi à rien ici. En appliquant la méthode de sourcing local et la vente par WhatsApp apprise pendant ces 7 jours, j'ai lancé mon premier produit avec 80 000 FCFA de stock. Aujourd'hui, je fais 8 à 12 livraisons par jour.</p><cite>Marc K., Douala</cite></blockquote>
-      <blockquote><h3>Tout se fait vraiment depuis le téléphone !</h3><p>Je pensais qu'il me fallait absolument un ordinateur portable et un site Shopify payant. La formation m'a montré comment tout orchestrer depuis mon téléphone. La méthode de confirmation d'appel a fait passer mon taux de livraison effectif de 50 % à plus de 85 %.</p><cite>Aïcha T., Abidjan</cite></blockquote>
+      <blockquote><h3>J'ai rentabilisé mes 39 000 FCFA dès ma 3e vente.</h3><p>J'avais déjà suivi deux formations sur le dropshipping occidental qui ne m'avaient servi à rien ici. En appliquant la méthode de sourcing local et la vente par WhatsApp apprise pendant ces 7 jours, j'ai lancé mon premier produit avec 80 000 FCFA de stock. Aujourd'hui, je fais 8 à 12 livraisons par jour.</p><cite>Marc K., Douala</cite></blockquote>
+      <blockquote><h3>Tout se fait vraiment depuis le téléphone !</h3><p>Je pensais qu'il me fallait absolument un ordinateur portable et un site Shopify payant. La formation m'a montré comment tout orchestrer depuis mon téléphone. La méthode de confirmation d'appel a fait passer mon taux de livraison effectif de 50 % à plus de 85 %.</p><cite>Aïcha T., Abidjan</cite></blockquote>
       <blockquote><h3>Le module sur le sourcing en Chine a tout changé.</h3><p>Trouver le bon produit était mon plus grand blocage. Grâce aux contacts et à la méthode de négociation directe avec les fournisseurs chinois montrée dans la formation, je marge désormais à x4 sur mes articles de puériculture.</p><cite>Cedric M., Yaoundé</cite></blockquote>
     </div>
     <!-- Emplacement pour de vraies captures d'écran (WhatsApp, ventes Mobile Money) -->
@@ -440,10 +467,10 @@ footer a.l:first-of-type{margin-left:0}
       <h2>Questions fréquentes</h2>
     </div>
     <div class="faq rv">
-      <details name="faq" open><summary>Est-ce que 7 jours suffisent vraiment pour tout apprendre ?</summary><p>Oui, absolument. Il s'agit d'un programme 100 % pratique et intensif, dénué de théorie inutile. Chaque jour est dédié à une étape concrète : sourcing, offre, tunnels légers, publicité et livraison. À la fin des 7 jours, votre système est prêt à tourner.</p></details>
-      <details name="faq"><summary>Est-ce que j'ai besoin d'un ordinateur portable ?</summary><p>Non. Tout le système est conçu pour être géré directement depuis votre smartphone (Android ou iPhone). De la recherche de produit à la gestion des livraisons, vous n'avez besoin d'aucun matériel informatique coûteux.</p></details>
-      <details name="faq"><summary>Que faire si je n'ai pas de gros budget pour débuter ?</summary><p>C'est précisément l'avantage du e-commerce adapté à l'Afrique. Vous apprendrez à démarrer en testant des produits du marché local avec un petit budget (parfois moins de 100 000 FCFA de stock au départ) avant de réinvestir vos profits dans l'importation de Chine.</p></details>
-      <details name="faq"><summary>Comment fonctionne le paiement de la formation ?</summary><p>Le règlement de 39 000 FCFA s'effectue simplement et en toute sécurité via Mobile Money (Orange Money, MTN Mobile Money, Wave, etc.) ou par carte. Une fois le paiement validé, vous recevez un accès immédiat au groupe d'accompagnement et aux modules.</p></details>
+      <details name="faq" open><summary>Est-ce que 7 jours suffisent vraiment pour tout apprendre ?</summary><p>Oui, absolument. Il s'agit d'un programme 100 % pratique et intensif, dénué de théorie inutile. Chaque jour est dédié à une étape concrète : sourcing, offre, tunnels légers, publicité et livraison. À la fin des 7 jours, votre système est prêt à tourner.</p></details>
+      <details name="faq"><summary>Est-ce que j'ai besoin d'un ordinateur portable ?</summary><p>Non. Tout le système est conçu pour être géré directement depuis votre smartphone (Android ou iPhone). De la recherche de produit à la gestion des livraisons, vous n'avez besoin d'aucun matériel informatique coûteux.</p></details>
+      <details name="faq"><summary>Que faire si je n'ai pas de gros budget pour débuter ?</summary><p>C'est précisément l'avantage du e-commerce adapté à l'Afrique. Vous apprendrez à démarrer en testant des produits du marché local avec un petit budget (parfois moins de 100 000 FCFA de stock au départ) avant de réinvestir vos profits dans l'importation de Chine.</p></details>
+      <details name="faq"><summary>Comment fonctionne le paiement de la formation ?</summary><p>Le règlement de 39 000 FCFA s'effectue simplement et en toute sécurité via Mobile Money (Orange Money, MTN Mobile Money, Wave, etc.) ou par carte. Une fois le paiement validé, vous recevez un accès immédiat au groupe d'accompagnement et aux modules.</p></details>
     </div>
   </div>
 </section>
@@ -458,9 +485,9 @@ footer a.l:first-of-type{margin-left:0}
     </div>
     <div class="box rv">
       <p class="lead">Bénéficiez du tarif exceptionnel réservé à la nouvelle session intensive de 7 jours.</p>
-      <div class="old">Prix standard : 100 000 FCFA</div>
-      <div class="amount">39 000 FCFA</div>
-      <div class="save">Tarif promotionnel · économisez 61 000 FCFA</div>
+      <div class="old">Prix standard : 100 000 FCFA</div>
+      <div class="amount">39 000 FCFA</div>
+      <div class="save">Tarif promotionnel · économisez 61 000 FCFA</div>
       <div class="cd-wrap" data-cd-wrap>
         <div class="cd-label">Début de la session le 15 décembre</div>
         <div class="cd" role="timer" aria-live="off">
@@ -469,14 +496,14 @@ footer a.l:first-of-type{margin-left:0}
           <div><b data-m>00</b><small>Min</small></div>
           <div><b data-s>00</b><small>Sec</small></div>
         </div>
-        <div class="cd-end">La session a démarré. Contactez-nous pour la prochaine !</div>
+        <div class="cd-end">La session a démarré. Contactez-nous pour la prochaine !</div>
       </div>
       <ul class="checks">
-        <li>Format : 7 jours de formation intensive et pratique</li>
-        <li>100 % en ligne, avec des formateurs qualifiés</li>
+        <li>Format : 7 jours de formation intensive et pratique</li>
+        <li>100 % en ligne, avec des formateurs qualifiés</li>
         <li>Accès immédiat au groupe d'accompagnement et aux modules</li>
       </ul>
-      <a class="btn block" data-checkout href="#">JE M'INSCRIS POUR 39 000 FCFA</a>
+      <a class="btn block" data-checkout href="#"><span class="cta-l">JE M'INSCRIS POUR 39 000 FCFA</span><span class="cta-s">JE M'INSCRIS · 39 000 FCFA</span></a>
       <p class="note">Paiement par Mobile Money (Orange Money, MTN Mobile Money, Wave, etc.) ou par carte.</p>
     </div>
   </div>
@@ -485,14 +512,14 @@ footer a.l:first-of-type{margin-left:0}
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <h3>Besoin d'aide pour vous inscrire ?</h3>
+    <h3>Besoin d'aide pour vous inscrire ?</h3>
     <a class="btn inv" data-wa href="#">Parler à un conseiller sur WhatsApp</a>
     <p>© Programme 360 · <a class="l" href="#">Mentions légales</a> | <a class="l" href="#">CGV</a></p>
   </div>
 </footer>
 
-<a class="wa" data-wa href="#" aria-label="WhatsApp">Une question ? Écrivez-nous sur WhatsApp</a>
-<div class="sticky" id="sticky"><div><s>100 000 FCFA</s><b>39 000 FCFA</b></div><a class="btn" data-checkout href="#offre">JE M'INSCRIS</a></div>
+<a class="wa" data-wa href="#" aria-label="WhatsApp">Une question ? Écrivez-nous sur WhatsApp</a>
+<div class="sticky" id="sticky"><div><s>100 000 FCFA</s><b>39 000 FCFA</b></div><a class="btn" data-checkout href="#offre">JE M'INSCRIS</a></div>
 
 <script>
 /* ====== CONFIGURATION : modifiez ici ====== */
@@ -595,13 +622,13 @@ const nf = n => Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 function sim(){
   const p = +$("i-price").value, c = +$("i-coef").value, o = +$("i-ord").value, r = +$("i-rate").value / 100;
   const unit = p - p / c, deliv = o * 30 * r, total = deliv * unit;
-  $("v-price").textContent = nf(p) + " FCFA";
+  $("v-price").textContent = nf(p) + "\u00a0FCFA";
   $("v-coef").textContent = String(c).replace(".", ",") + "x";
   $("v-ord").textContent = o;
-  $("v-rate").textContent = Math.round(r * 100) + " %";
-  $("o-total").textContent = nf(total) + " FCFA";
+  $("v-rate").textContent = Math.round(r * 100) + "\u00a0%";
+  $("o-total").textContent = nf(total) + "\u00a0FCFA";
   $("o-deliv").textContent = Math.round(deliv);
-  $("o-unit").textContent = nf(unit) + " FCFA";
+  $("o-unit").textContent = nf(unit) + "\u00a0FCFA";
   const n = Math.ceil(39000 / unit);
   $("o-roi").textContent = n + (n > 1 ? " ventes livrées" : " vente livrée");
 }
